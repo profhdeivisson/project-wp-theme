@@ -10,7 +10,7 @@ O tema **Project WP** é composto por:
 ## Passos Necessários para Utilização do Tema
 1. Instalar/Baixar o WordPress.
 2. Ir até a pasta do WordPress > `wp-content` > `themes` > `test-projects`
-3. Na pasta `themes`, baixar o tema utilizando `git clone ...`.
+3. Na pasta `themes`, baixar o tema utilizando `git clone https://github.com/profhdeivisson/project-wp-theme.git`.
 
 ## Dependências/Plugins
 - Instalar o **node** e o **npm**.
