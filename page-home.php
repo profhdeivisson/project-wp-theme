@@ -22,7 +22,9 @@ get_header(); ?>
         while ( $projetos_query->have_posts() ) : $projetos_query->the_post();
             // Obtenha o ID da categoria e o URL da imagem usando ACF
             $category_id = get_field('tipo'); // Supondo que "tipo" é o campo personalizado para categoria
-            $image_url = get_field('imagem'); // Supondo que "imagem" é o campo personalizado para imagem
+            $image = get_field('imagem'); // Supondo que "imagem" é o campo personalizado para imagem
+            $image_url = $image['url'];
+            $image_alt = $image['alt'];
             
             // Obtenha o nome da categoria usando o ID (opcional)
             $category_name = get_the_category()[0]->name;
@@ -31,7 +33,7 @@ get_header(); ?>
 
             <article class="project-card" data-type="<?php echo esc_attr($category_id[0]); ?>">
                 <a href="<?php the_permalink(); ?>" class="project-card-link">
-                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>" class="project-card-image">
+                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo $image_alt; ?>" class="project-card-image">
                     <div class="project-card-content">
                         <h2 class="project-card-title"><?php the_title(); ?></h2>
                         <p class="project-card-description"><strong>Resumo: </strong><?php echo mb_strimwidth($resumo, 0, 50, "..."); ?></p>

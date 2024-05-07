@@ -14,8 +14,13 @@ get_header(); ?>
 
             // Data do Projeto
             echo '<p>Data: ' . get_the_date() . '</p>';
+            
+            // Imagem do Projeto
+            $image = get_field('imagem'); // Agora retorna um array
+            $image_url = $image['url']; // URL da imagem
+            $image_alt = $image['alt']; // Texto alternativo da imagem
             ?>
-            <img src="<?php echo the_field('imagem'); ?>" alt="<?php the_title(); ?>" class="project-card-image"><br>
+            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" class="project-card-image"><br>
             <?php
             // Descrição do Projeto
             echo '<p><strong>Descrição do projeto:</strong> ';
@@ -65,11 +70,13 @@ get_header(); ?>
                         // Compare com o ID da categoria atual
                         if ($projeto_categoria_id[0] == $categoria_atual_id[0]) {
                             // Obtenha o URL da imagem usando ACF
-                            $image_url = get_field('imagem'); // Supondo que "imagem" é o campo personalizado para imagem
+                            $image = get_field('imagem');
+                            $image_url = $image['url'];
+                            $image_alt = $image['alt']; // Supondo que "imagem" é o campo personalizado para imagem
                             ?>
 
                             <div>
-                                <img src="<?php echo esc_url($image_url); ?>">
+                                <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
                                 <h3><?php the_title(); ?></h3>
                                 <a href="<?php the_permalink(); ?>">Ver projeto</a>
                             </div>
