@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "compile-scss": "sass scss/style.scss css/style.css"
+  },
+  "dependencies": {
+    "sass": "^1.76.0",
+    "vite": "^5.2.11"
+  }
+}
