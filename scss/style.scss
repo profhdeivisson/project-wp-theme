@@ -45,7 +45,7 @@ body {
 }
 
 .hamburger-menu {
-    display: none; // Ocultar por padrão
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -143,12 +143,12 @@ body {
     display: block;
     min-width: auto;
     padding: 10px;
-    margin-bottom: 10px; /* Espaço entre os botões */
+    margin-bottom: 10px;
     margin-right: 10px;
-    background-color: #f2f2f2; /* Cor de fundo dos botões */
-    color: $color-primary; /* Cor do texto dos botões */
+    background-color: #f2f2f2;
+    color: $color-primary;
     border: none;
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 #filter-section ul li a{
@@ -162,7 +162,7 @@ body {
 }
 
 #filter-section button:hover {
-    background-color: #ddd; /* Cor de fundo dos botões ao passar o mouse */
+    background-color: #ddd;
 }
 
 
@@ -240,74 +240,65 @@ body {
 
 // Página Contato
 
-// Estilos para a página de contato
 .contact-page {
-    // Estilos para o cabeçalho da seção de contato
     display: flex;
     justify-content: center;
     padding: 50px 80px;
+
     .wp-block-heading {
-        font-size: 2rem; // Tamanho da fonte do cabeçalho
-        color: $color-primary; // Cor do texto do cabeçalho
-        margin-bottom: $spacing-small; // Espaço abaixo do cabeçalho
+        font-size: 2rem;
+        color: $color-primary;
+        margin-bottom: $spacing-small;
     }
 
-    // Estilos para o formulário de contato
     .wpcf7-form {
-        background-color: #f9f9f9; // Cor de fundo do formulário
+        background-color: #f9f9f9;
         padding: 16px 35px;
-        width: 100%; // Espaçamento interno do formulário
-        border-radius: 4px; // Bordas arredondadas do formulário
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra do formulário
+        width: 100%;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-        // Estilos para os campos de entrada do formulário
         .wpcf7-form-control {
-            width: 92%; // Largura total dentro do seu contêiner
-            margin-bottom: $spacing-small; // Espaço abaixo de cada campo
-            border: 1px solid #ccc; // Borda dos campos de entrada
-            border-radius: 4px; // Bordas arredondadas dos campos de entrada
-            padding: $spacing-small; // Espaçamento interno dos campos de entrada
+            width: 92%;
+            margin-bottom: $spacing-small;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: $spacing-small;
 
-            // Estilos para o estado de foco dos campos de entrada
             &:focus {
-                border-color: $color-primary; // Cor da borda quando o campo está focado
-                outline: none; // Remover o contorno padrão
+                border-color: $color-primary;
+                outline: none;
             }
         }
 
-        // Estilos para o botão de envio
         .wpcf7-submit {
             width: -webkit-fill-available;
-            background-color: $color-primary; // Cor de fundo do botão
-            color: $color-text-light; // Cor do texto do botão
-            padding: $spacing-small $spacing-medium; // Espaçamento interno do botão
-            border: none; // Remover a borda do botão
-            border-radius: 4px; // Bordas arredondadas do botão
-            cursor: pointer; // Cursor do mouse como ponteiro
-            transition: background-color 0.3s ease; // Transição suave da cor de fundo
+            background-color: $color-primary;
+            color: $color-text-light;
+            padding: $spacing-small $spacing-medium;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
 
-            // Estilos para o estado de passar o mouse sobre o botão
             &:hover {
-                background-color: darken($color-primary, 10%); // Escurecer a cor de fundo do botão
+                background-color: darken($color-primary, 10%);
             }
         }
     }
 }
 
-// Media queries para dispositivos móveis
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: block; // Mostrar o botão do menu hambúrguer
+        display: block;
         position: absolute;
         right: 10%;
     }
 
-    // Ocultar o menu principal e mostrar quando o menu hambúrguer é clicado
     .site-header .container ul {
         display: none;
     }
 
-    // Quando o menu está ativo
     .site-header .container.active ul {
         display: block;
         position: absolute;
@@ -359,7 +350,6 @@ body {
     }
 }
 
-// Media queries para tablets
 @media (max-width: 1024px) {
     .site-header .container ul li {
         margin-right: 10px;
