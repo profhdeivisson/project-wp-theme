@@ -10,7 +10,13 @@
 
     <header class="site-header">
         <div class="container">
-            <h1 class="logo"><?php bloginfo( 'name' ); ?></h1>
+            <?php
+            if ( has_custom_logo() ) {
+                the_custom_logo();
+            } else {
+                echo '<h1 class="logo">' . get_bloginfo( 'name' ) . '</h1>';
+            }
+            ?>
             <button class="hamburger-menu" aria-label="Menu" aria-controls="navigation">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
